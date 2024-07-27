@@ -24,24 +24,24 @@ export const FloatingNav = ({
 
   // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
-
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
-      if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
+  let scrollTimeout: NodeJS.Timeout;
+    useMotionValueEvent(scrollYProgress, "change", (current) => {
+      // Check if current is not undefined and is a number
+      if (typeof current === "number") {
+        clearTimeout(scrollTimeout);
         setVisible(true);
-      } else {
-        if (direction < 0) {
+
+        if (scrollYProgress.get() < 0.05) {
+          // also set true for the initial state
           setVisible(true);
         } else {
-          setVisible(false);
+          // Set a timeout to hide the navbar after scrolling stops
+          scrollTimeout = setTimeout(() => {
+            setVisible(false);
+          }, 3000); // Adjust the delay as needed
         }
       }
-    }
-  });
+    });
 
   return (
     <AnimatePresence mode="wait">
