@@ -93,7 +93,7 @@ export const BentoGridItem = ({
           {img && (
             <img
               src={PUBLIC_URL + img}
-              alt={PUBLIC_URL + img}
+              alt= "img"
               className={cn(imgClassName, "object-cover object-center ")}
             />
           )}
@@ -105,7 +105,7 @@ export const BentoGridItem = ({
         >
           {spareImg && (
             <img
-              src={process.env.PUBLIC_URL + spareImg}
+              src={PUBLIC_URL + spareImg}
               alt="spareImg"
               //   width={220}
               className="object-cover object-center w-full h-full"
