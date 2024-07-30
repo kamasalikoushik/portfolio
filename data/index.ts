@@ -6,6 +6,9 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
+const PUBLIC_URL =
+  "https://raw.githubusercontent.com/kamasalikoushik/portfolio/main/public/";
+  
 export const gridItems = [
   {
     id: 1,
@@ -77,16 +80,16 @@ export const projects = [
     des: `Developed a transportation management platform with institute-based login, real-time Notification updates, and
 advanced route and schedule management.Utilized Node.js, React, MongoDB, and integrated a UPI payment system for
 enhanced functionality and deployed on Render website.`,
-    img: "/landing-page.png",
-    iconLists: ["/re.svg", "/node.svg", "mongo.png"],
+    img: PUBLIC_URL + "/landing-page.png",
+    iconLists: [PUBLIC_URL + "/re.svg", PUBLIC_URL + "/node.svg", PUBLIC_URL + "mongo.png"],
     link: "https://gc-hackathon-2024.web.app/",
   },
   {
     id: 2,
     title: "Task Titan - Advanced To-Do Organizer",
     des: "Developed an enhanced task management application, revolutionizing traditional to-do lists.",
-    img: "/p2.png",
-    iconLists: ["/re.svg", "/node.svg"],
+    img: PUBLIC_URL + "/p2.png",
+    iconLists: [PUBLIC_URL + "/re.svg", PUBLIC_URL +"/node.svg"],
     link: "",
   },
 ];
@@ -98,33 +101,33 @@ export const workExperience = [
     title: " Backend Intern",
     desc: "Migrated over 100 WordPress posts and more than 2GB of media to the Grigora platform in just 1 minute and 12 seconds. Utilized technologies like Node.js, Amazon DynamoDB, Amazon S3, and GraphQL for seamless transitions.",
     className: "md:col-span-2",
-    thumbnail: "/comp1.webp",
+    thumbnail: PUBLIC_URL + "/comp1.webp",
   },
   {
     id: 2,
     title: " Software and Devops Intern",
     desc: "Devised a proof-of-concept for extending the Golang controller microservice to manage host and docker services. Enhanced system control capabilities through innovative microservice management.",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/comp2.svg",
+    thumbnail: PUBLIC_URL + "/comp2.svg",
   },
   {
     id: 3,
     title: " Software Intern",
     desc: "Implemented an automated business rules model using Drools rule-engine for an alert-based notification system. Conducted a detailed comparative study of notification systems and rule engines, including Kafka and Amazon SQS.",
     className: "md:col-span-2",
-    thumbnail: "/comp3.svg",
+    thumbnail: PUBLIC_URL + "/comp3.svg",
   },
 ];
 
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: PUBLIC_URL + "/git.svg",
     link: "https://github.com/kamasali-koushik",
   },
   {
     id: 2,
-    img: "/link.svg",
+    img: PUBLIC_URL + "/link.svg",
     link: "https://www.linkedin.com/in/kamasali-koushik/",
   },
 ];
